@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Usage:
+#   sudo ./hdp-setup.sh
+#   ./run-remote-command hdp-set-up.sh nodes.txt
+
 # Disable iptables
 service iptables stop
 service iptables save
