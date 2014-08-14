@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Usage:
-#   sudo ./hdp-setup.sh
-#   ./run-remote-command hdp-set-up.sh nodes.txt
+#   sudo ./hdp-setup-rhel.sh
+#   ./run-remote-command hdp-setup-rhel.sh slaves
 
 # Disable iptables
 service iptables stop

@@ -2,7 +2,7 @@
 
 # Usage:
 #  sudo ./cdh-setup.sh
-#  ./run-remote-command cdh-set-up.sh nodes.txt
+#  ./run-remote-command cdh-setup.sh slaves
 
 echo 0 > /proc/sys/vm/swappiness
 
