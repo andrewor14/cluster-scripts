@@ -1,11 +1,11 @@
 #!/bin/bash
 
-if [[ "$#" -ne 2 ]]; then
-  echo "Usage: ./copy-to-all [file or directory] [file with hostnames]"
+if [[ "$#" -ne 1 ]]; then
+  echo "Usage: ./copy-to-all [file or directory]"
   exit 1
 fi
 
 while read address; do
   scp -r $1 $address:~
-done < $2
+done < slaves
 
