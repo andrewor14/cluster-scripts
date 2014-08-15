@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Usage:
-#   ./hdp-setup-rhel.sh
-#   ./run-remote-command.sh scripts/hdp-setup-rhel.sh
+#   ./setup-rhel.sh
+#   ./run-remote-command.sh scripts/setup-rhel.sh
 
 # Disable iptables
 service iptables stop
@@ -12,7 +12,8 @@ chkconfig iptables off
 yum -y install ntp
 chkconfig ntpd on
 service ntpd start
-# Disable selinux
+# Disable selinux and swappiness
 content=$(sed s/SELINUX=enforcing/SELINUX=disabled/ /etc/selinux/config)
 echo "$content" > /etc/selinux/config
+echo 0 > /proc/sys/vm/swappiness
 
