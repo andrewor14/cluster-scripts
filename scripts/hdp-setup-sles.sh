@@ -5,9 +5,7 @@
 #   ./run-remote-command hdp-setup-sles.sh slaves
 
 # Configure NTP
-zypper --non-interactive install ntp
+zypper --non-interactive --no-gpg-checks install ntp
 /etc/init.d/ntp start
-# Ignore zypper gpg checks
-zypper --no-gpg-checks search ntp
 # Disable selinux
 echo 0 > /selinux/enforce
