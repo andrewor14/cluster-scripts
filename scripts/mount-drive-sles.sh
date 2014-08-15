@@ -4,6 +4,12 @@
 # launched with at least one instance store. The names of devices and mount
 # directories may not apply.
 
-mount /dev/xvdb /mnt
+if [[ "$#" -le 2 ]]; then
+  echo "Usage: ./mount-drive-sles.sh [drive name] [mount point]"
+  echo "  e.g. ./mount-drive-sles.sh /dev/xvdb /mnt"
+  exit 1
+fi
+
+mount "$1" "$2"
 lsblk
 

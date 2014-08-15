@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [[ "$#" -ne 1 ]]; then
-  echo "Usage: ./copy-key-to-all [key]"
+  echo "Usage: ./copy-key-to-all.sh [key]"
   exit 1
 fi
 

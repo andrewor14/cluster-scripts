@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Usage:
-#  sudo ./cdh-setup-rhel.sh
-#  ./run-remote-command cdh-setup-rhel.sh slaves
+#  ./cdh-setup-rhel.sh
+#  ./run-remote-command.sh scripts/cdh-setup-rhel.sh
 
 echo 0 > /proc/sys/vm/swappiness
 

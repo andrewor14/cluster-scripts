@@ -2,7 +2,7 @@
 
 # Usage:
 #   ./hdp-setup-sles.sh
-#   ./run-remote-command hdp-setup-sles.sh slaves
+#   ./run-remote-command.sh scripts/hdp-setup-sles.sh
 
 # Configure NTP
 zypper --non-interactive --no-gpg-checks install ntp

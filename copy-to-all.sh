@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [[ "$#" -ne 1 ]]; then
-  echo "Usage: ./copy-to-all [file or directory]"
+  echo "Usage: ./copy-to-all.sh [file or directory]"
   exit 1
 fi
 
