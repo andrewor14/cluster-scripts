@@ -11,7 +11,7 @@ script="$1"
 shift
 
 while read address; do
-  echo "* Running $1 on $address"
+  echo "* Running $script on $address"
   ssh $address "bash -s" < "$script" "$@"
 done < slaves
 
