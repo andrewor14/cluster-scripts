@@ -2,7 +2,7 @@
 
 # Note: This does not execute with sudo or support quoted script arguments
 
-if [[ "$#" -le 1 ]]; then
+if [[ "$#" -lt 1 ]]; then
   echo "Usage: ./run-command-on-all.sh [script] <script-args>"
   exit 1
 fi
