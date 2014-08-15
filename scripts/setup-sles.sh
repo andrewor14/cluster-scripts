@@ -15,4 +15,4 @@ echo 0 > /proc/sys/vm/swappiness
 # Install Java
 wget http://javadl.sun.com/webapps/download/AutoDL?BundleId=95115 -O jre-7u67-linux-x64.rpm
 rpm -ivh jre-7u67-linux-x64.rpm
-
+rm jre-7u67-linux-x64.rpm
