@@ -11,7 +11,8 @@ script="$1"
 shift
 
 while read address; do
-  echo "* Running $script on $address"
-  ssh $address "bash -s" < "$script" "$@"
+  log_file_name="$script-$address.log"
+  echo "* Logging to $log_file_name"
+  ssh $address "bash -s" < "$script" "$@" &> "$log_file_name" &
 done < slaves
 
