@@ -7,10 +7,7 @@
 #   ./run-remote-command.sh scripts/setup-sles.sh
 
 # Install git
-zypper addrepo http://download.opensuse.org/repositories/devel:/languages:/perl/SLE_11_SP3/devel:languages:perl.repo
-zypper addrepo http://download.opensuse.org/repositories/devel:/tools:/scm/SLE_11_SP2/devel:tools:scm.repo
 zypper --non-interactive --no-gpg-checks install git
-git config --global core.pager more
 # Configure NTP
 zypper --non-interactive --no-gpg-checks install ntp
 /etc/init.d/ntp start
