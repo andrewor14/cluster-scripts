@@ -6,6 +6,7 @@ if [[ "$#" -ne 1 ]]; then
 fi
 
 while read address; do
-  scp -r $1 $address:~
+  scp -r $1 $address:~ &
 done < slaves
 
+wait

@@ -4,6 +4,8 @@
 #   ./setup-rhel.sh
 #   ./run-remote-command.sh scripts/setup-rhel.sh
 
+# Install git
+yum -y install git
 # Disable iptables
 service iptables stop
 service iptables save
