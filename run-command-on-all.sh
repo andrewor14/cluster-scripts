@@ -17,3 +17,5 @@ while read address; do
   ssh $address "sudo bash -s" < "$script" "$@" &> "$log_file_name" &
 done < slaves
 
+wait
+echo "=== All done ==="
